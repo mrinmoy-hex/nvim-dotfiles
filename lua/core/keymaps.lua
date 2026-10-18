@@ -35,7 +35,7 @@ vim.keymap.set('n', '<leader>b', '<cmd> enew <Cr>', opts)   -- new buffer
 -- window management
 vim.keymap.set('n', '<leader>v', '<C-w>v', opts)    -- split window vertical
 vim.keymap.set('n', '<leader>h', '<C-w>s', opts)    -- split window horizontal
-vim.keymap.set('n', '<leader>se', '<C-w>', opts)    -- make split windows equal width & height
+vim.keymap.set('n', '<leader>se', '<C-w>=', opts)    -- make split windows equal width & height
 vim.keymap.set('n', '<leader>xs', ':close<CR>', opts)   -- close current split window
 
 -- navigate between splits
@@ -80,7 +80,7 @@ vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open float
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- Save and load session
-vim.keymap.set('n', '<leader>ss', ':mksession! .session.vim<CR>', { noremap = true, silent = false })
+vim.keymap.set('n', '<leader>sm', ':mksession! .session.vim<CR>', { noremap = true, silent = false })
 vim.keymap.set('n', '<leader>sl', ':source .session.vim<CR>', { noremap = true, silent = false })
 
 -- Toggle comments (built-in gc/gcc operator, since Neovim 0.10).
@@ -91,7 +91,6 @@ vim.keymap.set('n', '<C-/>', 'gcc', { remap = true, silent = true })
 vim.keymap.set('v', '<C-_>', 'gc', { remap = true, silent = true })
 vim.keymap.set('v', '<C-c>', 'gc', { remap = true, silent = true })
 vim.keymap.set('v', '<C-/>', 'gc', { remap = true, silent = true })
-
 
 
 
