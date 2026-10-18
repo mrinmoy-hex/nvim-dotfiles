@@ -37,13 +37,18 @@ return {
       cond = hide_in_width,
     }
 
+    local user = {
+      function()
+        return ' Mrinmoy'
+      end,
+      color = { fg = '#2E3440', bg = '#88C0D0', gui = 'bold' },
+      padding = { left = 1, right = 1 },
+    }
+
     require('lualine').setup {
       options = {
         icons_enabled = true,
-        theme = 'nord', -- Set theme based on environment variable
-        -- Some useful glyphs:
-        -- https://www.nerdfonts.com/cheat-sheet
-        --        
+        theme = 'nord',
         section_separators = { left = '', right = '' },
         component_separators = { left = '', right = '' },
         disabled_filetypes = { 'alpha', 'neo-tree' },
@@ -51,11 +56,17 @@ return {
       },
       sections = {
         lualine_a = { mode },
-        lualine_b = { 'branch' },
+        lualine_b = { { 'branch', icon = '' } },
         lualine_c = { filename },
-        lualine_x = { diagnostics, diff, { 'encoding', cond = hide_in_width }, { 'filetype', cond = hide_in_width } },
-        lualine_y = { 'location' },
-        lualine_z = { 'progress' },
+        lualine_x = {
+          diagnostics,
+          diff,
+          { 'encoding', cond = hide_in_width },
+          { 'fileformat', cond = hide_in_width },
+          { 'filetype', cond = hide_in_width },
+        },
+        lualine_y = { { 'location', icon = '' } },
+        lualine_z = { user, 'progress' },
       },
       inactive_sections = {
         lualine_a = {},
