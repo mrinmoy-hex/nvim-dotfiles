@@ -88,10 +88,6 @@ The leader key is **Space**. The **[keybindings guide](KEYBINDINGS.md)** documen
 - `lazy-lock.json` pins plugin revisions for reproducible installs.
 - `KEYBINDINGS.md` is the detailed shortcut and workflow reference.
 
-## Acknowledgements
-
-- GitHub Copilot — AI-assisted implementation of the recent theme, statusline, bufferline, and navigation updates.
-
 ## Configured language servers
 
 The LSP configuration enables these servers when their tools are installed:
