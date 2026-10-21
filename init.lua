@@ -19,6 +19,8 @@ require("lazy").setup({
 	require("plugins.lualine"),
 	require("plugins.treesitter"),
 	require("plugins.telescope"),
+	require("plugins.trouble"),
+	require("plugins.flash"),
 	require("plugins.terminal"),
 	require("plugins.lsp"),
 	require("plugins.autocompletion"),
