@@ -12,9 +12,11 @@ For a complete list of shortcuts and practical workflows, see the **[keybindings
 - **Language support:** built-in Neovim LSP configuration with Mason-managed tools.
 - **Completion and snippets:** nvim-cmp, LuaSnip, and friendly-snippets.
 - **Formatting and diagnostics:** none-ls provides formatters and diagnostics; supported buffers are formatted on save.
+- **Diagnostics navigation:** Trouble provides workspace and current-buffer diagnostic lists; `[d` and `]d` jump between diagnostics.
+- **Quick navigation:** Flash provides on-screen jumps with `s` and Treesitter-based jumps with `S`.
 - **Terminal:** ToggleTerm provides persistent bottom, floating, and side terminals.
 - **Git:** Gitsigns, Fugitive, and Neo-tree Git status.
-- **UI:** Nord theme, Lualine statusline, Bufferline, Alpha dashboard, and indent guides.
+- **UI:** Catppuccin Mocha theme, Lualine statusline, VS Code-inspired Bufferline, Alpha dashboard, and indent guides. Press **Space b g** to toggle theme transparency.
 - **Editing helpers:** comment toggling, automatic pairs, TODO highlighting, and automatic indentation detection.
 
 ## Requirements
@@ -100,4 +102,3 @@ Mason is configured to install the servers and tools listed in the config. For P
 - Add or adjust plugin setup in `lua/plugins/`.
 - Edit the pinned plugin revisions in `lazy-lock.json` by using `:Lazy` to update plugins; avoid editing revisions manually unless you know the target commit.
 - Review the [keybindings guide](KEYBINDINGS.md) after changing mappings so it stays in sync with the config.
-
