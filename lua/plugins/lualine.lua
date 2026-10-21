@@ -24,7 +24,7 @@ return {
       sources = { 'nvim_diagnostic' },
       sections = { 'error', 'warn' },
       symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' },
-      colored = false,
+      colored = true,
       update_in_insert = false,
       always_visible = false,
       cond = hide_in_width,
@@ -37,22 +37,15 @@ return {
       cond = hide_in_width,
     }
 
-    local user = {
-      function()
-        return ' Mrinmoy'
-      end,
-      color = { fg = '#2E3440', bg = '#88C0D0', gui = 'bold' },
-      padding = { left = 1, right = 1 },
-    }
-
     require('lualine').setup {
       options = {
         icons_enabled = true,
         theme = 'nord',
-        section_separators = { left = '', right = '' },
-        component_separators = { left = '', right = '' },
+        section_separators = { left = '', right = '' },
+        component_separators = { left = '│', right = '│' },
         disabled_filetypes = { 'alpha', 'neo-tree' },
         always_divide_middle = true,
+        globalstatus = true,
       },
       sections = {
         lualine_a = { mode },
@@ -66,7 +59,7 @@ return {
           { 'filetype', cond = hide_in_width },
         },
         lualine_y = { { 'location', icon = '' } },
-        lualine_z = { user, 'progress' },
+        lualine_z = { 'progress' },
       },
       inactive_sections = {
         lualine_a = {},
