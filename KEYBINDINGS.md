@@ -45,7 +45,7 @@ with a few built-in Vim keys and practical workflows.
 | `Space Space` | Normal | Find and switch to an open buffer with Telescope. |
 | `Space s m` | Normal | Save/overwrite the session as `.session.vim` in the current working directory. |
 | `Space s l` | Normal | Load `.session.vim` from the current working directory. |
-| `Space b g` | Normal | Toggle Nord background transparency. |
+| `Space b g` | Normal | Toggle Catppuccin background transparency. |
 
 `Space s n` is intentionally different from an ordinary save: it skips all
 buffer write autocommands, not only formatting.
