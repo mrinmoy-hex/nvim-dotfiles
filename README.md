@@ -12,9 +12,11 @@ For a complete list of shortcuts and practical workflows, see the **[keybindings
 - **Language support:** built-in Neovim LSP configuration with Mason-managed tools.
 - **Completion and snippets:** nvim-cmp, LuaSnip, and friendly-snippets.
 - **Formatting and diagnostics:** none-ls provides formatters and diagnostics; supported buffers are formatted on save.
+- **Diagnostics navigation:** Trouble provides workspace and current-buffer diagnostic lists; `[d` and `]d` jump between diagnostics.
+- **Quick navigation:** Flash provides on-screen jumps with `s` and Treesitter-based jumps with `S`.
 - **Terminal:** ToggleTerm provides persistent bottom, floating, and side terminals.
 - **Git:** Gitsigns, Fugitive, and Neo-tree Git status.
-- **UI:** Catppuccin Mocha theme, Lualine statusline, Bufferline, Alpha dashboard, and indent guides.
+- **UI:** Catppuccin Mocha theme, Lualine statusline, VS Code-inspired Bufferline, Alpha dashboard, and indent guides. Press **Space b g** to toggle theme transparency.
 - **Editing helpers:** comment toggling, automatic pairs, TODO highlighting, and automatic indentation detection.
 
 ## Requirements
@@ -85,6 +87,10 @@ The leader key is **Space**. The **[keybindings guide](KEYBINDINGS.md)** documen
 - `lua/plugins/` contains individual plugin specifications and setup.
 - `lazy-lock.json` pins plugin revisions for reproducible installs.
 - `KEYBINDINGS.md` is the detailed shortcut and workflow reference.
+
+## Acknowledgements
+
+- GitHub Copilot — AI-assisted implementation of the recent theme, statusline, bufferline, and navigation updates.
 
 ## Configured language servers
 
