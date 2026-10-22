@@ -9,7 +9,7 @@ vim.keymap.set({'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 local opts = { noremap = true, silent = true }
 
 -- save file
-vim.keymap.set('n', '<C-s>', '<cmd> w <CR>', opts) 
+vim.keymap.set('n', '<C-s>', '<cmd>write<CR>', { desc = 'Save and format file', noremap = true, silent = true })
 
 -- save file without auto-formatting
 vim.keymap.set('n', '<leader>sn', '<cmd>noautocmd w <CR>', opts)
@@ -91,7 +91,6 @@ vim.keymap.set('n', '<C-/>', 'gcc', { remap = true, silent = true })
 vim.keymap.set('v', '<C-_>', 'gc', { remap = true, silent = true })
 vim.keymap.set('v', '<C-c>', 'gc', { remap = true, silent = true })
 vim.keymap.set('v', '<C-/>', 'gc', { remap = true, silent = true })
-
 
 
 

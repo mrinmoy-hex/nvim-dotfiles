@@ -11,7 +11,7 @@ For a complete list of shortcuts and practical workflows, see the **[keybindings
 - **Search:** Telescope searches files, project text, buffers, diagnostics, symbols, and help.
 - **Language support:** built-in Neovim LSP configuration with Mason-managed tools.
 - **Completion and snippets:** nvim-cmp, LuaSnip, and friendly-snippets.
-- **Formatting and diagnostics:** none-ls provides formatters and diagnostics; supported buffers are formatted on save.
+- **Formatting and diagnostics:** format-on-save uses clangd for C/C++, rust-analyzer for Rust, Prettier, StyLua, Ruff, shfmt, and Terraform fmt; none-ls also provides diagnostics.
 - **Diagnostics navigation:** Trouble provides workspace and current-buffer diagnostic lists; `[d` and `]d` jump between diagnostics.
 - **Quick navigation:** Flash provides on-screen jumps with `s` and Treesitter-based jumps with `S`.
 - **Terminal:** ToggleTerm provides persistent bottom, floating, and side terminals.
@@ -57,6 +57,7 @@ On first launch, lazy.nvim bootstraps and installs the configured plugins. Once 
 - Press **Space e** to open the file explorer.
 - Press **Space s f** to find a file, or **Space s g** to search project text.
 - Press **Ctrl+`** or **Space t** to toggle the integrated terminal.
+- Press **Space f** to format the current buffer, or **Ctrl+s** to format and save.
 - In a supported file, use **gd** to jump to a definition and **Space c a** for code actions.
 - Press **Ctrl+s** to save. Formatting runs on save when a formatting client is available for the current buffer.
 
@@ -95,6 +96,7 @@ The LSP configuration enables these servers when their tools are installed:
 `clangd`, `cssls`, `dockerls`, `html`, `jsonls`, `lua_ls`, `pylsp`, `ruff`, `rust_analyzer`, `sqlls`, `tailwindcss`, `terraformls`, `ts_ls`, and `yamlls`.
 
 Mason is configured to install the servers and tools listed in the config. For Python, both Ruff and python-lsp-server (`pylsp`) are configured; adjust `lua/plugins/lsp.lua` if you prefer to use only one of them.
+Rust formatting requires the Rust toolchain's `rustfmt` component; install it with `rustup component add rustfmt`.
 
 ## Customization
 

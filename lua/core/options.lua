@@ -41,3 +41,45 @@ vim.opt.shortmess:append 'c' -- don't give |ins-completion-menu| messages
 vim.opt.iskeyword:append '-' -- hyphenated words recognized by searches
 vim.opt.formatoptions:remove { 'c', 'r', 'o' } -- don't insert the current comment leader automatically for auto-wrapping comments using 'textwidth', hitting <Enter> in insert mode, or hitting 'o' or 'O' in normal mode.
 vim.opt.runtimepath:remove '/usr/share/vim/vimfiles' -- separate vim plugins from neovim in case vim still in use
+
+local indent_width_by_filetype = {
+  astro = 2,
+  c = 2,
+  cpp = 2,
+  css = 2,
+  graphql = 2,
+  handlebars = 2,
+  html = 2,
+  htmlangular = 2,
+  javascript = 2,
+  javascriptreact = 2,
+  json = 2,
+  json5 = 2,
+  jsonc = 2,
+  less = 2,
+  lua = 2,
+  ['markdown.mdx'] = 2,
+  markdown = 2,
+  scss = 2,
+  svelte = 2,
+  rust = 4,
+  terraform = 2,
+  ['terraform-vars'] = 2,
+  tf = 2,
+  typescript = 2,
+  typescriptreact = 2,
+  vue = 2,
+  yaml = 2,
+}
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = vim.tbl_keys(indent_width_by_filetype),
+  callback = function(event)
+    local width = indent_width_by_filetype[vim.bo[event.buf].filetype]
+    vim.bo[event.buf].expandtab = true
+    vim.bo[event.buf].shiftwidth = width
+    vim.bo[event.buf].softtabstop = width
+    vim.bo[event.buf].tabstop = width
+  end,
+  desc = 'Set default indentation for common filetypes',
+})

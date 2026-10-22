@@ -25,14 +25,15 @@ with a few built-in Vim keys and practical workflows.
 4. Toggle the integrated terminal with **Ctrl+`** or **Space t**.
 5. Use **gd** to jump to a definition, **gr** for references, and
    **Space c a** for code actions when an LSP is available.
-6. Save with **Ctrl+s**. Configured formatters run automatically on save when
-   the current buffer has a formatting client.
+6. Save with **Ctrl+s**. A filetype-supported formatter runs before writing
+   when available.
 
 ## General editing and files
 
 | Key | Mode | Action |
 |---|---|---|
-| `Ctrl+s` | Normal | Save the current file. A configured formatter may run on save. |
+| `Ctrl+s` | Normal | Format with the configured filetype formatter, if available, then save. |
+| `Space f` | Normal | Format the current buffer with its configured formatter. |
 | `Space s n` | Normal | Save with `noautocmd`, bypassing autocommands (including format-on-save). |
 | `Ctrl+q` | Normal | Quit the current window; unsaved changes may prevent quitting. |
 | `x` | Normal | Delete the character under the cursor without yanking it. |
@@ -163,9 +164,18 @@ buffer.
 | `Space q` | Send diagnostics to the current window's location list. |
 | `Space d o` | Toggle diagnostics globally. |
 
-Format-on-save is configured for supported buffers; there is no separate manual
-format keybinding in this config. **Ctrl+s** runs the save hooks, while
-**Space s n** bypasses them.
+Format-on-save uses clangd for C/C++, rust-analyzer with `rustfmt` for Rust,
+Prettier for web/markup files, StyLua for Lua, Ruff for Python, shfmt for shell
+scripts, and `terraform fmt` for Terraform. Install the Rust formatter with
+`rustup component add rustfmt` if it is missing.
+
+vim-sleuth detects indentation in existing files; new Lua, C/C++, and
+Prettier-supported files use two spaces, while Rust, Python, and shell use
+four. A project's EditorConfig and formatter configuration take precedence
+where supported.
+
+There is no separate manual format keybinding in this config. **Ctrl+s** runs
+the save hooks, while **Space s n** bypasses them.
 
 ## Completion and snippets (Insert mode)
 
