@@ -11,7 +11,7 @@ For a complete list of shortcuts and practical workflows, see the **[keybindings
 - **Search:** Telescope searches files, project text, buffers, diagnostics, symbols, and help.
 - **Language support:** built-in Neovim LSP configuration with Mason-managed tools.
 - **Completion and snippets:** nvim-cmp, LuaSnip, and friendly-snippets.
-- **Formatting and diagnostics:** format-on-save uses clangd for C/C++, rust-analyzer for Rust, Prettier, StyLua, Ruff, shfmt, and Terraform fmt; none-ls also provides diagnostics.
+- **Formatting and diagnostics:** format-on-save uses clangd for C/C++, rust-analyzer for Rust, Prettier, StyLua, Ruff, shfmt, and Terraform fmt; none-ls provides ESLint (`eslint_d`) and Makefile (`checkmake`) diagnostics.
 - **Diagnostics navigation:** Trouble provides workspace and current-buffer diagnostic lists; `[d` and `]d` jump between diagnostics.
 - **Quick navigation:** Flash provides on-screen jumps with `s` and Treesitter-based jumps with `S`.
 - **Terminal:** ToggleTerm provides persistent bottom, floating, and side terminals.

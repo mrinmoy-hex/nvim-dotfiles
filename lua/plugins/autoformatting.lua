@@ -24,6 +24,7 @@ return {
 
     local sources = {
       diagnostics.checkmake,
+      require 'none-ls.diagnostics.eslint_d',
       formatting.prettier,
       formatting.stylua.with { extra_args = { '--indent-width', '2' } },
       formatting.shfmt.with { args = { '-i', '4' } },
