@@ -10,6 +10,8 @@ with a few built-in Vim keys and practical workflows.
 - `<C-x>` means hold **Ctrl** and press **x**; `<S-Tab>` means **Shift+Tab**.
 - **Normal** mode is for navigation and commands; press `Esc` to return to it.
   **Insert** mode is for typing; **Visual** mode is for selecting text.
+- **Alt+j / Alt+k** move the current line or selected lines down / up.
+- **Space y d / Space y u** duplicate the current line below / above.
 - **LSP** shortcuts are buffer-local: they appear when a language server attaches
   to the current file. Completion shortcuts work in Insert mode.
 - Some terminal emulators intercept **Ctrl+`**. If yours does, use **Space t**
@@ -37,6 +39,9 @@ with a few built-in Vim keys and practical workflows.
 | `Space s n` | Normal | Save with `noautocmd`, bypassing autocommands (including format-on-save). |
 | `Ctrl+q` | Normal | Quit the current window; unsaved changes may prevent quitting. |
 | `x` | Normal | Delete the character under the cursor without yanking it. |
+| `Alt+j` / `Alt+k` | Normal | Move the current line down / up. |
+| `Alt+j` / `Alt+k` | Visual | Move the selected lines down / up. |
+| `Space y d` / `Space y u` | Normal | Duplicate the current line below / above. |
 | `Ctrl+/`, `Ctrl+_`, or `Ctrl+c` | Normal | Toggle a comment on the current line. |
 | `Ctrl+/`, `Ctrl+_`, or `Ctrl+c` | Visual | Toggle comments on the selected lines. |
 | `Space l w` | Normal | Toggle line wrapping. |
