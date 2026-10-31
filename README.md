@@ -16,7 +16,7 @@ For a complete list of shortcuts and practical workflows, see the **[keybindings
 - **Quick navigation:** Flash provides on-screen jumps with `s` and Treesitter-based jumps with `S`.
 - **Terminal:** ToggleTerm provides persistent bottom, floating, and side terminals.
 - **Git:** Gitsigns, Fugitive, and Neo-tree Git status.
-- **UI:** Catppuccin Mocha theme, Lualine statusline, VS Code-inspired Bufferline, Alpha dashboard, and indent guides. Press **Space b g** to toggle theme transparency.
+- **UI:** Catppuccin Mocha theme, Lualine statusline, VS Code-inspired Bufferline, Alpha dashboard, indent guides, and smooth cursor/scroll animations. Press **Space b g** to toggle theme transparency.
 - **Editing helpers:** comment toggling, automatic pairs, TODO highlighting, and automatic indentation detection.
 
 ## Requirements

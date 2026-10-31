@@ -30,5 +30,6 @@ require("lazy").setup({
 	require("plugins.comment"),
 	require("plugins.gitsigns"),
 	require("plugins.alpha"),
+	require("plugins.animate"),
 	require("plugins.misc"),
 })
